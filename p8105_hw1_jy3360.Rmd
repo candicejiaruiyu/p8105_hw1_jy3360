@@ -85,7 +85,7 @@ df_2 <- tibble(
 df_2
 ```
 
-Try to take the mean of each variable in your dataframe. What works and what doesn’t?
+Question: Try to take the mean of each variable in your dataframe. What works and what doesn’t?
 
 Hint: for now, to take the mean of a variable in a dataframe, you need to pull the variable out of the dataframe. Try loading the tidyverse and using the pull function.
 ```{r}
@@ -98,7 +98,7 @@ mean(pull(df_2, var_factor))
 - It works when calculating the mean of numeric and logical vectors, but it doesn’t work when calculating the mean of character and factor vectors. 
 
 
-In some cases, you can explicitly convert variables from one type to another. Write a code chunk that applies the as.numeric function to the logical, character, and factor variables (please show this chunk but not the output). What happens, and why? Does this help explain what happens when you try to take the mean?
+Question: In some cases, you can explicitly convert variables from one type to another. Write a code chunk that applies the as.numeric function to the logical, character, and factor variables (please show this chunk but not the output). What happens, and why? Does this help explain what happens when you try to take the mean?
 
 ```{r conversion, eval = FALSE}
 as.numeric(pull(df_2, var_logical))
@@ -111,4 +111,5 @@ as.numeric(pull(df_2, var_factor))
 - When I convert the logical variable into numeric, it converts "TRUE" to 1 and "FALSE" to 0. 
 - Although the factor variable has not been assigned with order, R gives them order alphabetically, and assign them with value from 1 to 3. 
 - We can take the mean for logical and factor vectors but not for character vectors. 
+
 
